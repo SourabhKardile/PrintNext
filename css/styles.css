@@ -277,8 +277,11 @@ header {
 }
 
 .service-image {
-    height: 220px;
+    height: 250px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .service-image img {
