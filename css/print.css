@@ -1,0 +1,98 @@
+/* Print Styles for PrintNext Website */
+@media print {
+    /* Hide navigation and interactive elements */
+    header, .navbar, .hamburger, .cta-button, .btn-explore, .btn-quote,
+    .btn-submit, .social-links, .slider-nav, .slider-dots,
+    .footer-social, .footer-links, .footer-bottom-links {
+        display: none !important;
+    }
+    
+    /* Reset colors for printing */
+    body {
+        color: #000;
+        background: #fff;
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+    
+    /* Ensure images print properly */
+    img {
+        max-width: 100% !important;
+    }
+    
+    /* Ensure sections break properly */
+    section {
+        page-break-before: always;
+        margin: 15mm 0;
+        padding: 0 !important;
+    }
+    
+    /* Remove effects that don't print well */
+    * {
+        box-shadow: none !important;
+        text-shadow: none !important;
+        transition: none !important;
+        transform: none !important;
+    }
+    
+    /* Ensure URLs are printed */
+    a:link:after, a:visited:after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+    }
+    
+    /* Full width containers */
+    .container, .section {
+        width: 100% !important;
+        max-width: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    /* Improve grid layouts for print */
+    .services-grid {
+        display: block;
+    }
+    
+    .service-card {
+        page-break-inside: avoid;
+        margin-bottom: 10mm;
+    }
+    
+    /* Make sure contact info is clear */
+    .contact-item {
+        page-break-inside: avoid;
+        margin-bottom: 5mm;
+    }
+    
+    /* Footer print styles */
+    footer {
+        border-top: 1pt solid #ccc;
+        margin-top: 10mm;
+        padding-top: 5mm;
+        text-align: center;
+    }
+    
+    .footer-content {
+        display: block;
+    }
+    
+    .footer-copyright {
+        display: block;
+        margin-bottom: 3mm;
+    }
+    
+    .footer-logo {
+        display: block;
+        max-height: 10mm;
+        margin: 0 auto 2mm;
+    }
+    
+    .footer-copyright p {
+        font-size: 10pt;
+    }
+    
+    .footer-links {
+        display: none;
+    }
+}
