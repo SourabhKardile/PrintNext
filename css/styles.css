@@ -13,6 +13,16 @@
     box-sizing: border-box;
 }
 
+/* Section Separator */
+.section-separator {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -298,6 +308,78 @@ header {
     font-size: 15px;
 }
 
+/* Industries We Serve Section Styles */
+.section-subtitle {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.accent-line {
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 20px auto 0;
+}
+
+.industries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.industry-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 30px;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.industry-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: var(--primary-color);
+}
+
+.industry-icon {
+    width: 80px;
+    height: 80px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: var(--dark-bg);
+    margin-bottom: 20px;
+    transition: var(--transition);
+}
+
+.industry-card:hover .industry-icon {
+    background-color: var(--dark-bg);
+    color: var(--primary-color);
+    box-shadow: 0 0 15px var(--primary-color);
+}
+
+.industry-details h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.industry-details p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
 .service-features {
     list-style: none;
 }
@@ -371,6 +453,8 @@ header {
 
 .section-header {
     margin-bottom: 25px;
+    position: relative;
+    z-index: 1;
 }
 
 .section-header h2 {
@@ -430,6 +514,104 @@ header {
 
 .feature-text {
     font-weight: 500;
+}
+
+/* Statistics Section Styles */
+.stats-section {
+    background: linear-gradient(135deg, var(--dark-bg) 0%, #1a1a1a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+    opacity: 0.8;
+}
+
+.stats-section::after {
+    content: '';
+    position: absolute;
+    bottom: -150px;
+    right: -150px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    opacity: 0.03;
+    z-index: 0;
+}
+
+.stats-section .container::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    opacity: 0.02;
+    z-index: 0;
+}
+
+.stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 30px;
+    width: 250px;
+    margin-bottom: 20px;
+    position: relative;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-item:hover {
+    transform: translateY(-10px);
+    background-color: rgba(255, 165, 0, 0.05);
+    border-color: rgba(255, 165, 0, 0.2);
+}
+
+.stat-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.stat-number {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.stat-label {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .btn-quote {
@@ -963,6 +1145,32 @@ footer::before {
     .slider-slide {
         height: 400px;
     }
+    
+    .industries-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+    }
+    
+    .industry-card {
+        padding: 25px 20px;
+    }
+    
+    .stats-container {
+        margin-top: 40px;
+    }
+    
+    .stat-item {
+        padding: 25px;
+        width: 220px;
+    }
+    
+    .stat-number {
+        font-size: 42px;
+    }
+    
+    .stat-label {
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -982,6 +1190,42 @@ footer::before {
     
     .about-content h2 {
         font-size: 28px;
+    }
+    
+    .industries-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .industry-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+    }
+    
+    .industry-details h3 {
+        font-size: 18px;
+    }
+    
+    .industry-details p {
+        font-size: 14px;
+    }
+    
+    .stats-container {
+        margin-top: 30px;
+    }
+    
+    .stat-item {
+        padding: 20px;
+        width: 45%;
+    }
+    
+    .stat-number {
+        font-size: 38px;
+    }
+    
+    .stat-label {
+        font-size: 15px;
     }
     
     .features-grid {
@@ -1015,7 +1259,31 @@ footer::before {
 @media screen and (max-width: 576px) {
     .container {
         width: 95%;
+    }
+    
+    .industries-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .industry-card {
+        max-width: 400px;
+        margin: 0 auto;
         padding: 25px 10px;
+    }
+    
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .stat-item {
+        width: 80%;
+        max-width: 300px;
+    }
+    
+    .stat-item::before {
+        width: 40px;
     }
     
     .section {

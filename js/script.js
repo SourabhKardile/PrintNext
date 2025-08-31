@@ -174,4 +174,48 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentYear = new Date().getFullYear();
         copyrightYearElement.textContent = currentYear;
     }
+    
+    // Initialize statistics counters
+    initStatCounters();
 });
+
+// Statistics counter animation
+function initStatCounters() {
+    const statSection = document.getElementById('statistics');
+    const statNumbers = document.querySelectorAll('.stat-number');
+    
+    if (!statSection || statNumbers.length === 0) return;
+    
+    const animateCounters = () => {
+        statNumbers.forEach(counter => {
+            const targetValue = parseInt(counter.getAttribute('data-count'));
+            const displayText = counter.textContent;
+            const suffix = displayText.includes('+') ? '+' : '';
+            let count = 0;
+            const duration = 2000; // 2 seconds
+            const interval = Math.floor(duration / targetValue);
+            
+            const timer = setInterval(() => {
+                count += 1;
+                counter.textContent = count + suffix;
+                
+                if (count >= targetValue) {
+                    counter.textContent = targetValue + suffix;
+                    clearInterval(timer);
+                }
+            }, Math.max(interval, 15)); // Ensure minimum interval is 15ms for smooth animation
+        });
+    };
+    
+    // Use Intersection Observer to trigger counter animation when stats section is visible
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounters();
+                observer.unobserve(entry.target); // Only animate once
+            }
+        });
+    }, { threshold: 0.2 });
+    
+    observer.observe(statSection);
+}
