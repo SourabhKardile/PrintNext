@@ -55,10 +55,18 @@ ul {
 header {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 20px 0;
+    padding: 12px 0; /* Reduced from 20px */
     transition: var(--transition);
+}
+
+/* Add a class for the scrolled state */
+header.scrolled {
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 8px 0; /* Reduced from 15px */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .navbar {
@@ -71,7 +79,7 @@ header {
 }
 
 .logo img {
-    height: 40px;
+    height: 32px; /* Reduced from 40px */
     width: auto;
 }
 
@@ -86,9 +94,9 @@ header {
 .nav-links a {
     color: var(--secondary-color);
     font-weight: 600;
-    font-size: 16px;
+    font-size: 15px; /* Slightly reduced */
     letter-spacing: 1px;
-    padding: 5px 0;
+    padding: 3px 0; /* Reduced from 5px */
     position: relative;
     transition: var(--transition);
 }
@@ -494,6 +502,7 @@ header {
 
 .about-content p {
     margin-bottom: 30px;
+    text-align: justify;
     line-height: 1.8;
 }
 

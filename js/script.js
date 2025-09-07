@@ -74,18 +74,12 @@ function initScrollHandlers() {
     
     // Handler for all scroll-based functionality
     function handleScroll(scrollPos) {
-        // Header styling
+        // Header styling using CSS classes instead of inline styles
         if (header) {
             if (scrollPos > 50) {
                 header.classList.add('scrolled');
-                if (!header.style.background) {
-                    header.style.background = 'rgba(0, 0, 0, 0.9)';
-                    header.style.padding = '15px 0';
-                }
             } else {
                 header.classList.remove('scrolled');
-                header.style.background = 'transparent';
-                header.style.padding = '20px 0';
             }
         }
         

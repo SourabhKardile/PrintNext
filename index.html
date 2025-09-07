@@ -18,11 +18,12 @@
     <!-- Critical CSS -->
     <style>
         /* Critical path CSS inline for faster render */
-        :root{--primary-color:#ffa500;--secondary-color:#ffffff;--dark-bg:#121212;--text-color:#ffffff;--transition:all 0.3s ease}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Arial',sans-serif;line-height:1.6;color:var(--text-color);background-color:var(--dark-bg);overflow-x:hidden}a{text-decoration:none;color:inherit}ul{list-style:none}.container{width:90%;max-width:1200px;margin:0 auto}.navbar{display:flex;justify-content:space-between;align-items:center;padding:20px 0;position:fixed;width:100%;top:0;z-index:1000;transition:var(--transition)}.logo img{height:40px;transition:var(--transition)}.nav-links ul{display:flex}.nav-links li{margin:0 15px}.nav-links a{font-weight:500;position:relative;transition:var(--transition)}.nav-links a:hover{color:var(--primary-color)}.hamburger{display:none;cursor:pointer}
+        :root{--primary-color:#ffa500;--secondary-color:#ffffff;--dark-bg:#121212;--text-color:#ffffff;--transition:all 0.3s ease}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Arial',sans-serif;line-height:1.6;color:var(--text-color);background-color:var(--dark-bg);overflow-x:hidden}a{text-decoration:none;color:inherit}ul{list-style:none}.container{width:90%;max-width:1200px;margin:0 auto}header{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:12px 0;transition:var(--transition)}.navbar{display:flex;justify-content:space-between;align-items:center;width:90%;max-width:1200px;margin:0 auto;transition:var(--transition)}.logo img{height:32px;transition:var(--transition)}.nav-links ul{display:flex}.nav-links li{margin:0 12px}.nav-links a{font-weight:500;position:relative;transition:var(--transition)}.nav-links a:hover{color:var(--primary-color)}.hamburger{display:none;cursor:pointer}
     </style>
     <!-- Non-critical CSS -->
     <link rel="stylesheet" href="css/styles.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="css/print.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/mobile-nav.css">
     <!-- Preload for Font Awesome -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <!-- Font Awesome for icons (async) -->
@@ -73,6 +74,7 @@
     <!-- Preload Critical Resources -->
     <link rel="preload" href="images/printnext-logo.png" as="image">
     <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="css/mobile-nav.css" as="style">
     <link rel="preload" href="js/script.js" as="script">
 </head>
 <body>
