@@ -1,9 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
+        http://www.google.com/schemas/sitemap-image/1.1
+        http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
+   
+   <!-- Home Page -->
    <url>
-      <loc>https://www.printnextsolutions.com/</loc>
-      <lastmod>2025-08-31</lastmod>
-      <changefreq>monthly</changefreq>
+      <loc>https://printnextsolutions.com/</loc>
+      <lastmod>2025-09-07</lastmod>
+      <changefreq>weekly</changefreq>
       <priority>1.0</priority>
+      <image:image>
+         <image:loc>https://printnextsolutions.com/images/printnext-full-logo.png</image:loc>
+         <image:title>PrintNext Solutions Logo</image:title>
+         <image:caption>Premium Printing Services for Businesses</image:caption>
+      </image:image>
+   </url>
+   
+   <!-- Services Section -->
+   <url>
+      <loc>https://printnextsolutions.com/#services</loc>
+      <lastmod>2025-09-07</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.9</priority>
+      <image:image>
+         <image:loc>https://printnextsolutions.com/images/services/flex-printing.jpg</image:loc>
+         <image:title>Flex Printing Services</image:title>
+         <image:caption>High-quality flex printing solutions for advertising and marketing</image:caption>
+      </image:image>
+      <image:image>
+         <image:loc>https://printnextsolutions.com/images/services/uv-flatbed-printing.jpg</image:loc>
+         <image:title>UV Flatbed Printing Services</image:title>
+         <image:caption>Precise UV flatbed printing for durable materials</image:caption>
+      </image:image>
+   </url>
+   
+   <!-- About Section -->
+   <url>
+      <loc>https://printnextsolutions.com/#about</loc>
+      <lastmod>2025-09-07</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+      <image:image>
+         <image:loc>https://printnextsolutions.com/images/printing-equipment.jpg</image:loc>
+         <image:title>PrintNext State-of-the-art Equipment</image:title>
+         <image:caption>Our advanced printing technology ensures top quality results</image:caption>
+      </image:image>
+   </url>
+   
+   <!-- Portfolio Section -->
+   <url>
+      <loc>https://printnextsolutions.com/#work</loc>
+      <lastmod>2025-09-07</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   
+   <!-- Contact Section -->
+   <url>
+      <loc>https://printnextsolutions.com/#contact</loc>
+      <lastmod>2025-09-07</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.9</priority>
    </url>
 </urlset>

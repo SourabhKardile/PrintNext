@@ -3,15 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <title>PrintNext Solutions - Print Precision and Supply Excellence</title>
-    <meta name="description" content="PrintNext Solutions offers premium printing services with precision and supply excellence. Explore our range of printing solutions for your business needs.">
-    <meta name="keywords" content="PrintNext, printing solutions, print precision, supply excellence, printing services">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/print.css">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>PrintNext Solutions - Premium Printing Services & Supply Excellence</title>
+    <meta name="description" content="PrintNext Solutions offers high-quality printing services for businesses including flex, UV flatbed, eco-solvent printing and more. Fast turnaround and exceptional quality.">
+    <meta name="keywords" content="PrintNext, printing solutions, print services, flex printing, UV flatbed printing, eco-solvent printing, business printing, stationery printing, LED aluminum printing">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="PrintNext Solutions">
+    <meta property="og:title" content="PrintNext Solutions - Premium Printing Services">
+    <meta property="og:description" content="Professional printing services for businesses. High-quality flex, UV flatbed, eco-solvent printing and more with fast delivery.">
+    <meta property="og:image" content="images/printnext-full-logo.png">
+    <meta property="og:url" content="https://printnextsolutions.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://printnextsolutions.com">
+    <!-- Critical CSS -->
+    <style>
+        /* Critical path CSS inline for faster render */
+        :root{--primary-color:#ffa500;--secondary-color:#ffffff;--dark-bg:#121212;--text-color:#ffffff;--transition:all 0.3s ease}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Arial',sans-serif;line-height:1.6;color:var(--text-color);background-color:var(--dark-bg);overflow-x:hidden}a{text-decoration:none;color:inherit}ul{list-style:none}.container{width:90%;max-width:1200px;margin:0 auto}.navbar{display:flex;justify-content:space-between;align-items:center;padding:20px 0;position:fixed;width:100%;top:0;z-index:1000;transition:var(--transition)}.logo img{height:40px;transition:var(--transition)}.nav-links ul{display:flex}.nav-links li{margin:0 15px}.nav-links a{font-weight:500;position:relative;transition:var(--transition)}.nav-links a:hover{color:var(--primary-color)}.hamburger{display:none;cursor:pointer}
+    </style>
+    <!-- Non-critical CSS -->
+    <link rel="stylesheet" href="css/styles.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/print.css" media="print" onload="this.media='all'">
+    <!-- Preload for Font Awesome -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <!-- Font Awesome for icons (async) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Structured data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "PrintNext Solutions",
+      "description": "Professional printing services for businesses with high-quality flex, UV flatbed, eco-solvent printing and more.",
+      "image": "images/printnext-full-logo.png",
+      "url": "https://printnextsolutions.com",
+      "telephone": "+91-8855809311",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Shop No. 8, Opposite Thane Janta Sahakari Bank, Near Ganesh Temple, Landewadi, Bhosari",
+        "addressLocality": "Pune",
+        "addressRegion": "Maharashtra",
+        "postalCode": "411039",
+        "addressCountry": "IN"
+      },
+      "priceRange": "₹1000-₹5000",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- PWA Support -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ffa500">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="images/icons/icon-192x192.png">
+    
+    <!-- DNS Prefetching -->
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://formspree.io">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="images/printnext-logo.png" as="image">
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="js/script.js" as="script">
 </head>
 <body>
     <!-- Header Section -->
@@ -307,10 +369,6 @@
             <div class="about-wrapper">
                 <div class="about-image">
                     <img src="images/printing-equipment.jpg" alt="PrintNext Printing Equipment">
-                    <div class="experience-badge">
-                        <span class="years">10+</span>
-                        <span class="text">YEARS OF<br>EXPERIENCE</span>
-                    </div>
                 </div>
                 <div class="about-content">
                     <div class="section-header">
@@ -501,9 +559,48 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="js/responsive-images.js"></script>
-    <script src="js/portfolio-loader.js"></script>
-    <script src="js/script.js"></script>
+    <!-- JavaScript - with deferred loading for performance -->
+    <script src="js/responsive-images.js" defer></script>
+    <script src="js/portfolio-loader.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/formbricks-integration.js" defer></script>
+    <script src="js/footer-interactive.js" defer></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+        // Register service worker for PWA support
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registered successfully');
+                    })
+                    .catch(error => {
+                        console.log('ServiceWorker registration failed: ', error);
+                    });
+            });
+        }
+        
+        // Add analytics event for page load timing
+        window.addEventListener('load', () => {
+            // Record page load time
+            const loadTime = window.performance.timing.domContentLoadedEventEnd - 
+                             window.performance.timing.navigationStart;
+            
+            // Send to analytics if available
+            if (window.gtag) {
+                gtag('event', 'page_load_time', {
+                    'value': loadTime,
+                    'page_path': window.location.pathname
+                });
+            }
+            
+            // Mark the most important LCP element
+            const hero = document.querySelector('.hero-content');
+            if (hero) {
+                hero.setAttribute('fetchpriority', 'high');
+            }
+        });
+    </script>
 </body>
 </html>

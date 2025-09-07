@@ -1,12 +1,31 @@
 /**
  * Portfolio Loader
  * This script dynamically loads portfolio images and creates a slider
+ * Optimized for performance and slower internet connections
  */
 
-document.addEventListener('DOMContentLoaded', () => {
-    initPortfolioSlider();
-});
+// Use modern event loading to ensure DOM is ready before script execution
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPortfolio);
+} else {
+    // DOM already loaded, initialize immediately
+    initPortfolio();
+}
 
+// Initialization wrapper to delay non-critical components
+function initPortfolio() {
+    // Use requestIdleCallback for non-critical UI initialization
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(() => {
+            initPortfolioSlider();
+        }, { timeout: 2000 });
+    } else {
+        // Fallback for browsers without requestIdleCallback
+        setTimeout(initPortfolioSlider, 200);
+    }
+}
+
+// Improved portfolio slider with performance optimizations
 function initPortfolioSlider() {
     const workSlider = document.getElementById('workSlider');
     const sliderDots = document.getElementById('sliderDots');
